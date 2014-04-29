@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE04E78A190DDCA9006B7ADD /* libRscMgrUniv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE04E787190DDCA9006B7ADD /* libRscMgrUniv.a */; };
+		EE04E78C190DDD72006B7ADD /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE04E78B190DDD72006B7ADD /* ExternalAccessory.framework */; };
+		EE04E7D3190E1A67006B7ADD /* SerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE04E7D2190E1A67006B7ADD /* SerialViewController.m */; };
+		EE04E7D6190E2247006B7ADD /* FlightController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE04E7D5190E2247006B7ADD /* FlightController.m */; };
+		EE04E7DB190E2A47006B7ADD /* icon120 in Resources */ = {isa = PBXBuildFile; fileRef = EE04E7DA190E2A47006B7ADD /* icon120 */; };
+		EE04E7DD190E2A6B006B7ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E7DC190E2A6B006B7ADD /* Images.xcassets */; };
+		EE54A3AC190B1E180006A1D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AB190B1E180006A1D1 /* Foundation.framework */; };
+		EE54A3AE190B1E180006A1D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AD190B1E180006A1D1 /* CoreGraphics.framework */; };
+		EE54A3B0190B1E180006A1D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AF190B1E180006A1D1 /* UIKit.framework */; };
+		EE54A3B6190B1E180006A1D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3B4190B1E180006A1D1 /* InfoPlist.strings */; };
+		EE54A3B8190B1E180006A1D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54A3B7190B1E180006A1D1 /* main.m */; };
+		EE54A3BC190B1E180006A1D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54A3BB190B1E180006A1D1 /* AppDelegate.m */; };
+		EE54A3BF190B1E180006A1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3BD190B1E180006A1D1 /* Main.storyboard */; };
+		EE54A3C2190B1E180006A1D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54A3C1190B1E180006A1D1 /* ViewController.m */; };
+		EE54A3CB190B1E190006A1D1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3CA190B1E190006A1D1 /* XCTest.framework */; };
+		EE54A3CC190B1E190006A1D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AB190B1E180006A1D1 /* Foundation.framework */; };
+		EE54A3CD190B1E190006A1D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AF190B1E180006A1D1 /* UIKit.framework */; };
+		EE54A3D5190B1E190006A1D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3D3190B1E190006A1D1 /* InfoPlist.strings */; };
+		EE54A3D7190B1E190006A1D1 /* CMMotionTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54A3D6190B1E190006A1D1 /* CMMotionTestTests.m */; };
+		EE54A3E1190B20720006A1D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3E0190B20720006A1D1 /* CoreMotion.framework */; };
+		EE54A3E4190B24670006A1D1 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE54A3E3190B24670006A1D1 /* GraphView.m */; };
+		EE54A3E8190B88A30006A1D1 /* pitch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3E5190B88A30006A1D1 /* pitch@2x.png */; };
+		EE54A3E9190B88A30006A1D1 /* yaw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3E6190B88A30006A1D1 /* yaw@2x.png */; };
+		EE54A3EA190B88A30006A1D1 /* roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE54A3E7190B88A30006A1D1 /* roll@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE54A3CE190B1E190006A1D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE54A3A0190B1E180006A1D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE54A3A7190B1E180006A1D1;
+			remoteInfo = CMMotionTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE04E787190DDCA9006B7ADD /* libRscMgrUniv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRscMgrUniv.a; path = CMMotionTest/lib/libRscMgrUniv.a; sourceTree = "<group>"; };
+		EE04E788190DDCA9006B7ADD /* redparkSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = redparkSerial.h; path = CMMotionTest/lib/redparkSerial.h; sourceTree = "<group>"; };
+		EE04E789190DDCA9006B7ADD /* RscMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RscMgr.h; path = CMMotionTest/lib/RscMgr.h; sourceTree = "<group>"; };
+		EE04E78B190DDD72006B7ADD /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		EE04E7D1190E1A67006B7ADD /* SerialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialViewController.h; sourceTree = "<group>"; };
+		EE04E7D2190E1A67006B7ADD /* SerialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialViewController.m; sourceTree = "<group>"; };
+		EE04E7D4190E2247006B7ADD /* FlightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightController.h; sourceTree = "<group>"; };
+		EE04E7D5190E2247006B7ADD /* FlightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightController.m; sourceTree = "<group>"; };
+		EE04E7DA190E2A47006B7ADD /* icon120 */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon120; sourceTree = "<group>"; };
+		EE04E7DC190E2A6B006B7ADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE54A3A8190B1E180006A1D1 /* CMMotionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMMotionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE54A3AB190B1E180006A1D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE54A3AD190B1E180006A1D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EE54A3AF190B1E180006A1D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE54A3B3190B1E180006A1D1 /* CMMotionTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CMMotionTest-Info.plist"; sourceTree = "<group>"; };
+		EE54A3B5190B1E180006A1D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE54A3B7190B1E180006A1D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE54A3B9190B1E180006A1D1 /* CMMotionTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMMotionTest-Prefix.pch"; sourceTree = "<group>"; };
+		EE54A3BA190B1E180006A1D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE54A3BB190B1E180006A1D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE54A3BE190B1E180006A1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE54A3C0190B1E180006A1D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE54A3C1190B1E180006A1D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE54A3C9190B1E190006A1D1 /* CMMotionTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMMotionTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE54A3CA190B1E190006A1D1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EE54A3D2190B1E190006A1D1 /* CMMotionTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CMMotionTestTests-Info.plist"; sourceTree = "<group>"; };
+		EE54A3D4190B1E190006A1D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE54A3D6190B1E190006A1D1 /* CMMotionTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMotionTestTests.m; sourceTree = "<group>"; };
+		EE54A3E0190B20720006A1D1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EE54A3E2190B24670006A1D1 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		EE54A3E3190B24670006A1D1 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		EE54A3E5190B88A30006A1D1 /* pitch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pitch@2x.png"; sourceTree = "<group>"; };
+		EE54A3E6190B88A30006A1D1 /* yaw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yaw@2x.png"; sourceTree = "<group>"; };
+		EE54A3E7190B88A30006A1D1 /* roll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roll@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE54A3A5190B1E180006A1D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04E78C190DDD72006B7ADD /* ExternalAccessory.framework in Frameworks */,
+				EE54A3E1190B20720006A1D1 /* CoreMotion.framework in Frameworks */,
+				EE54A3AE190B1E180006A1D1 /* CoreGraphics.framework in Frameworks */,
+				EE54A3B0190B1E180006A1D1 /* UIKit.framework in Frameworks */,
+				EE54A3AC190B1E180006A1D1 /* Foundation.framework in Frameworks */,
+				EE04E78A190DDCA9006B7ADD /* libRscMgrUniv.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE54A3C6190B1E190006A1D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54A3CB190B1E190006A1D1 /* XCTest.framework in Frameworks */,
+				EE54A3CD190B1E190006A1D1 /* UIKit.framework in Frameworks */,
+				EE54A3CC190B1E190006A1D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE04E786190DDC94006B7ADD /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E787190DDCA9006B7ADD /* libRscMgrUniv.a */,
+				EE04E788190DDCA9006B7ADD /* redparkSerial.h */,
+				EE04E789190DDCA9006B7ADD /* RscMgr.h */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		EE54A39F190B1E180006A1D1 = {
+			isa = PBXGroup;
+			children = (
+				EE04E786190DDC94006B7ADD /* Lib */,
+				EE54A3B1190B1E180006A1D1 /* CMMotionTest */,
+				EE54A3D0190B1E190006A1D1 /* CMMotionTestTests */,
+				EE54A3AA190B1E180006A1D1 /* Frameworks */,
+				EE54A3A9190B1E180006A1D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE54A3A9190B1E180006A1D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE54A3A8190B1E180006A1D1 /* CMMotionTest.app */,
+				EE54A3C9190B1E190006A1D1 /* CMMotionTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE54A3AA190B1E180006A1D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E78B190DDD72006B7ADD /* ExternalAccessory.framework */,
+				EE54A3E0190B20720006A1D1 /* CoreMotion.framework */,
+				EE54A3AB190B1E180006A1D1 /* Foundation.framework */,
+				EE54A3AD190B1E180006A1D1 /* CoreGraphics.framework */,
+				EE54A3AF190B1E180006A1D1 /* UIKit.framework */,
+				EE54A3CA190B1E190006A1D1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE54A3B1190B1E180006A1D1 /* CMMotionTest */ = {
+			isa = PBXGroup;
+			children = (
+				EE54A3BA190B1E180006A1D1 /* AppDelegate.h */,
+				EE54A3BB190B1E180006A1D1 /* AppDelegate.m */,
+				EE54A3BD190B1E180006A1D1 /* Main.storyboard */,
+				EE54A3C0190B1E180006A1D1 /* ViewController.h */,
+				EE54A3C1190B1E180006A1D1 /* ViewController.m */,
+				EE04E7D1190E1A67006B7ADD /* SerialViewController.h */,
+				EE04E7D2190E1A67006B7ADD /* SerialViewController.m */,
+				EE54A3E2190B24670006A1D1 /* GraphView.h */,
+				EE54A3E3190B24670006A1D1 /* GraphView.m */,
+				EE54A3E5190B88A30006A1D1 /* pitch@2x.png */,
+				EE54A3E6190B88A30006A1D1 /* yaw@2x.png */,
+				EE54A3E7190B88A30006A1D1 /* roll@2x.png */,
+				EE54A3B2190B1E180006A1D1 /* Supporting Files */,
+				EE04E7D4190E2247006B7ADD /* FlightController.h */,
+				EE04E7D5190E2247006B7ADD /* FlightController.m */,
+				EE04E7DA190E2A47006B7ADD /* icon120 */,
+				EE04E7DC190E2A6B006B7ADD /* Images.xcassets */,
+			);
+			path = CMMotionTest;
+			sourceTree = "<group>";
+		};
+		EE54A3B2190B1E180006A1D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE54A3B3190B1E180006A1D1 /* CMMotionTest-Info.plist */,
+				EE54A3B4190B1E180006A1D1 /* InfoPlist.strings */,
+				EE54A3B7190B1E180006A1D1 /* main.m */,
+				EE54A3B9190B1E180006A1D1 /* CMMotionTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE54A3D0190B1E190006A1D1 /* CMMotionTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE54A3D6190B1E190006A1D1 /* CMMotionTestTests.m */,
+				EE54A3D1190B1E190006A1D1 /* Supporting Files */,
+			);
+			path = CMMotionTestTests;
+			sourceTree = "<group>";
+		};
+		EE54A3D1190B1E190006A1D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE54A3D2190B1E190006A1D1 /* CMMotionTestTests-Info.plist */,
+				EE54A3D3190B1E190006A1D1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE54A3A7190B1E180006A1D1 /* CMMotionTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE54A3DA190B1E190006A1D1 /* Build configuration list for PBXNativeTarget "CMMotionTest" */;
+			buildPhases = (
+				EE54A3A4190B1E180006A1D1 /* Sources */,
+				EE54A3A5190B1E180006A1D1 /* Frameworks */,
+				EE54A3A6190B1E180006A1D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMMotionTest;
+			productName = CMMotionTest;
+			productReference = EE54A3A8190B1E180006A1D1 /* CMMotionTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE54A3C8190B1E190006A1D1 /* CMMotionTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE54A3DD190B1E190006A1D1 /* Build configuration list for PBXNativeTarget "CMMotionTestTests" */;
+			buildPhases = (
+				EE54A3C5190B1E190006A1D1 /* Sources */,
+				EE54A3C6190B1E190006A1D1 /* Frameworks */,
+				EE54A3C7190B1E190006A1D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE54A3CF190B1E190006A1D1 /* PBXTargetDependency */,
+			);
+			name = CMMotionTestTests;
+			productName = CMMotionTestTests;
+			productReference = EE54A3C9190B1E190006A1D1 /* CMMotionTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE54A3A0190B1E180006A1D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = soneru;
+				TargetAttributes = {
+					EE54A3A7190B1E180006A1D1 = {
+						DevelopmentTeam = L897K2C26B;
+					};
+					EE54A3C8190B1E190006A1D1 = {
+						TestTargetID = EE54A3A7190B1E180006A1D1;
+					};
+				};
+			};
+			buildConfigurationList = EE54A3A3190B1E180006A1D1 /* Build configuration list for PBXProject "CMMotionTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE54A39F190B1E180006A1D1;
+			productRefGroup = EE54A3A9190B1E180006A1D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE54A3A7190B1E180006A1D1 /* CMMotionTest */,
+				EE54A3C8190B1E190006A1D1 /* CMMotionTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE54A3A6190B1E180006A1D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54A3E8190B88A30006A1D1 /* pitch@2x.png in Resources */,
+				EE54A3E9190B88A30006A1D1 /* yaw@2x.png in Resources */,
+				EE04E7DD190E2A6B006B7ADD /* Images.xcassets in Resources */,
+				EE54A3EA190B88A30006A1D1 /* roll@2x.png in Resources */,
+				EE04E7DB190E2A47006B7ADD /* icon120 in Resources */,
+				EE54A3B6190B1E180006A1D1 /* InfoPlist.strings in Resources */,
+				EE54A3BF190B1E180006A1D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE54A3C7190B1E190006A1D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54A3D5190B1E190006A1D1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE54A3A4190B1E180006A1D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54A3C2190B1E180006A1D1 /* ViewController.m in Sources */,
+				EE54A3BC190B1E180006A1D1 /* AppDelegate.m in Sources */,
+				EE04E7D3190E1A67006B7ADD /* SerialViewController.m in Sources */,
+				EE54A3B8190B1E180006A1D1 /* main.m in Sources */,
+				EE54A3E4190B24670006A1D1 /* GraphView.m in Sources */,
+				EE04E7D6190E2247006B7ADD /* FlightController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE54A3C5190B1E190006A1D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54A3D7190B1E190006A1D1 /* CMMotionTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE54A3CF190B1E190006A1D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE54A3A7190B1E180006A1D1 /* CMMotionTest */;
+			targetProxy = EE54A3CE190B1E190006A1D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE54A3B4190B1E180006A1D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE54A3B5190B1E180006A1D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE54A3BD190B1E180006A1D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE54A3BE190B1E180006A1D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE54A3D3190B1E190006A1D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE54A3D4190B1E190006A1D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE54A3D8190B1E190006A1D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE54A3D9190B1E190006A1D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE54A3DB190B1E190006A1D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMMotionTest/CMMotionTest-Prefix.pch";
+				INFOPLIST_FILE = "CMMotionTest/CMMotionTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CMMotionTest/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE54A3DC190B1E190006A1D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMMotionTest/CMMotionTest-Prefix.pch";
+				INFOPLIST_FILE = "CMMotionTest/CMMotionTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CMMotionTest/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EE54A3DE190B1E190006A1D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CMMotionTest.app/CMMotionTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMMotionTest/CMMotionTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CMMotionTestTests/CMMotionTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EE54A3DF190B1E190006A1D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CMMotionTest.app/CMMotionTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CMMotionTest/CMMotionTest-Prefix.pch";
+				INFOPLIST_FILE = "CMMotionTestTests/CMMotionTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE54A3A3190B1E180006A1D1 /* Build configuration list for PBXProject "CMMotionTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE54A3D8190B1E190006A1D1 /* Debug */,
+				EE54A3D9190B1E190006A1D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE54A3DA190B1E190006A1D1 /* Build configuration list for PBXNativeTarget "CMMotionTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE54A3DB190B1E190006A1D1 /* Debug */,
+				EE54A3DC190B1E190006A1D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE54A3DD190B1E190006A1D1 /* Build configuration list for PBXNativeTarget "CMMotionTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE54A3DE190B1E190006A1D1 /* Debug */,
+				EE54A3DF190B1E190006A1D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE54A3A0190B1E180006A1D1 /* Project object */;
+}
