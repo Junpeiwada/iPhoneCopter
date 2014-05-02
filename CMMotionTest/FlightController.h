@@ -20,5 +20,6 @@
 -(float)currentMotorPower:(int)index;
 
 @property (nonatomic) float pFactor;
+@property (nonatomic) float throttle;
 
 @end

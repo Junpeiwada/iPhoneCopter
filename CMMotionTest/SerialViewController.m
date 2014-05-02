@@ -8,7 +8,7 @@
 
 #import "SerialViewController.h"
 #import "GraphView.h"
-
+#import "PID.h"
 #import "FlightController.h"
 
 #define MODEM_STAT_ON_COLOR [UIColor colorWithRed:0.0/255.0 green:255.0/255.0 blue:0.0/255.0 alpha:1.0]
@@ -35,6 +35,8 @@ typedef enum CableConnectState
     
     FlightController *cont;
     
+    
+    PID *pidController;
     
     NSMutableString *readBuff;
 }
@@ -82,20 +84,37 @@ typedef enum CableConnectState
     self.labelI.text = [NSString stringWithFormat:@"I %f",PIDi];
     self.labelD.text = [NSString stringWithFormat:@"D %f",PIDd];
     
+
+    
     for (int i = 0; i <100; i ++) {
         [self.graph addX:0 y:0 z:0];
     }
     
+    [pidController reset];
+    float position = 0.0;
+    
     for (int i = 0; i <280 * 2; i +=2 ) {
-        [cont sim];
-        [self.graph addX:cont.currentAtti /30 y:0 z:0];
+        float sousaryou = 0.0;
+        sousaryou = [pidController calc:position target:30 interval:0.2];
+        
+        position = position - sousaryou * 0.1;
+        
+        [self.graph addX:position /30 y:sousaryou /100 z:0];
+        
+        if (i > 100){
+            NSLog(@"");
+        }
     }
 }
+
+
 - (IBAction)changeP:(id)sender {
     UIStepper *v = sender;
     PIDp = v.value;
     
     [cont setPID:PIDp valueI:PIDi valueD:PIDd];
+    [pidController setupParamWithKP:PIDp KI:PIDi KD:PIDd PID_LIM:300 INTGRAL_LIM:300];
+
     [self updateGraph];
 }
 - (IBAction)changeI:(id)sender {
@@ -103,6 +122,8 @@ typedef enum CableConnectState
     PIDi = v.value;
     
     [cont setPID:PIDp valueI:PIDi valueD:PIDd];
+    [pidController setupParamWithKP:PIDp KI:PIDi KD:PIDd PID_LIM:300 INTGRAL_LIM:300];
+
     [self updateGraph];
 }
 - (IBAction)changeD:(id)sender {
@@ -110,6 +131,8 @@ typedef enum CableConnectState
     PIDd = v.value;
     
     [cont setPID:PIDp valueI:PIDi valueD:PIDd];
+    [pidController setupParamWithKP:PIDp KI:PIDi KD:PIDd PID_LIM:300 INTGRAL_LIM:300];
+
     [self updateGraph];
 }
 
@@ -134,6 +157,11 @@ typedef enum CableConnectState
     
     [self updateGraph];
     [self portStatusChanged];
+    
+    
+    pidController = [PID new];
+    [pidController initParameters];
+    [pidController setupParamWithKP:PIDp KI:PIDi KD:PIDd PID_LIM:300 INTGRAL_LIM:300];
 }
 
 - (void)didReceiveMemoryWarning
@@ -223,6 +251,15 @@ typedef enum CableConnectState
         for (int i = 0; i < lines.count -1; i++) {
             NSString *line = lines[i];
             NSLog(@"%@",line);
+            
+            NSArray *items  = [line componentsSeparatedByString:@":"];
+            
+            if (items.count == 9){
+                int throttoleValue = [items[0] intValue];
+                throttoleValue = throttoleValue - 1008;
+                float value = (float)throttoleValue / 936;
+                cont.throttle = 5 * value;
+            }
         }
     }
     

@@ -37,7 +37,7 @@ typedef struct {
 @property (nonatomic) CMMotionManager *manager;
 
 
-@property (nonatomic) float *throttle;
+
 
 @end
 
@@ -66,6 +66,8 @@ typedef struct {
     targetAttiData[PITCH] = 0;
     targetAttiData[ROLL] = 0;
     targetAttiData[YAW] = 0;
+    
+    self.throttle = 0.2;
     
     diff[0] = diff[1];
     diff[1] = targetAttiData[0] - attiData[0];
@@ -97,7 +99,7 @@ typedef struct {
 
 -(void)calcMotorPower{
     
-    float Throttle = 2;
+    float Throttle = self.throttle;
     
     float rateEffect = 0.4;
     
@@ -134,7 +136,7 @@ typedef struct {
         return 1;
     }
     
-    int MaxMotor = 30;
+    int MaxMotor = 50;
     
     int value = motorPower[index] * MaxMotor;
     if (value >= MaxMotor){
