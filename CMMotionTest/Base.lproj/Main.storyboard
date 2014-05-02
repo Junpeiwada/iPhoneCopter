@@ -242,34 +242,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0bc-s6-KCf">
-                                <rect key="frame" x="206" y="301" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UFU-h1-1Mn">
-                                <rect key="frame" x="206" y="394" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0iD-vU-BhP">
-                                <rect key="frame" x="52" y="301" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nOd-04-lJZ">
-                                <rect key="frame" x="52" y="394" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" maximumValue="4" stepValue="0.01" id="gye-cF-2If">
                                 <rect key="frame" x="113" y="339" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -284,6 +256,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHj-Oc-qqJ">
+                                <rect key="frame" x="187" y="305" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Yf-6t-pTL">
+                                <rect key="frame" x="187" y="402" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dD0-hp-IGI">
+                                <rect key="frame" x="33" y="305" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3iT-aS-gig">
+                                <rect key="frame" x="33" y="402" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="WCL-II-BUa">
+                                <rect key="frame" x="187" y="382" width="100" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.03254181749" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="C6u-Hm-CTC">
+                                <rect key="frame" x="33" y="382" width="100" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.03254181749" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="J6U-4H-QWQ">
+                                <rect key="frame" x="187" y="285" width="100" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.03254181749" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="uik-Uo-Chn">
+                                <rect key="frame" x="33" y="285" width="100" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.03254181749" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -294,17 +314,21 @@
                         <outlet property="labelCTS" destination="Eiz-2t-BCb" id="rCA-vK-UCh"/>
                         <outlet property="labelD" destination="30Z-Uc-hpl" id="VRC-dl-8BJ"/>
                         <outlet property="labelDSR" destination="4gU-wx-AZb" id="OLv-TY-NjX"/>
-                        <outlet property="labelFL" destination="0iD-vU-BhP" id="HdK-Mh-Xso"/>
-                        <outlet property="labelFR" destination="0bc-s6-KCf" id="AmZ-WH-SLA"/>
+                        <outlet property="labelFL" destination="dD0-hp-IGI" id="eVs-Vc-VHr"/>
+                        <outlet property="labelFR" destination="IHj-Oc-qqJ" id="aAU-Hi-Yk6"/>
                         <outlet property="labelI" destination="BV5-e2-bRH" id="C8s-OI-Jsq"/>
                         <outlet property="labelP" destination="WYK-ym-e79" id="7a5-m5-Orx"/>
                         <outlet property="labelPFactor" destination="m8V-ub-7Wi" id="Mw7-AH-3d9"/>
                         <outlet property="labelRI" destination="ihG-BD-TDv" id="YRI-RM-Ojv"/>
-                        <outlet property="labelRL" destination="nOd-04-lJZ" id="nVY-Zk-D2l"/>
-                        <outlet property="labelRR" destination="UFU-h1-1Mn" id="Xl5-zI-whV"/>
+                        <outlet property="labelRL" destination="3iT-aS-gig" id="Jgc-6g-dsL"/>
+                        <outlet property="labelRR" destination="9Yf-6t-pTL" id="0Pa-7y-xQF"/>
                         <outlet property="labelReadCount" destination="mdX-ax-Ibt" id="UcM-DF-SBN"/>
                         <outlet property="labelStatus" destination="CqU-jD-RQi" id="vKE-Cr-JsC"/>
                         <outlet property="pFactorStepper" destination="gye-cF-2If" id="Ps5-3b-yCm"/>
+                        <outlet property="viewFL" destination="uik-Uo-Chn" id="R6e-li-3VK"/>
+                        <outlet property="viewFR" destination="J6U-4H-QWQ" id="wgJ-60-88B"/>
+                        <outlet property="viewRL" destination="C6u-Hm-CTC" id="XD3-M6-Gdj"/>
+                        <outlet property="viewRR" destination="WCL-II-BUa" id="fBJ-WZ-Vru"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxu-Eu-7DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,6 @@
 		EE04E78C190DDD72006B7ADD /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE04E78B190DDD72006B7ADD /* ExternalAccessory.framework */; };
 		EE04E7D3190E1A67006B7ADD /* SerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE04E7D2190E1A67006B7ADD /* SerialViewController.m */; };
 		EE04E7D6190E2247006B7ADD /* FlightController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE04E7D5190E2247006B7ADD /* FlightController.m */; };
-		EE04E7DB190E2A47006B7ADD /* icon120 in Resources */ = {isa = PBXBuildFile; fileRef = EE04E7DA190E2A47006B7ADD /* icon120 */; };
 		EE04E7DD190E2A6B006B7ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E7DC190E2A6B006B7ADD /* Images.xcassets */; };
 		EE54A3AC190B1E180006A1D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AB190B1E180006A1D1 /* Foundation.framework */; };
 		EE54A3AE190B1E180006A1D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54A3AD190B1E180006A1D1 /* CoreGraphics.framework */; };
@@ -52,7 +51,6 @@
 		EE04E7D2190E1A67006B7ADD /* SerialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialViewController.m; sourceTree = "<group>"; };
 		EE04E7D4190E2247006B7ADD /* FlightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightController.h; sourceTree = "<group>"; };
 		EE04E7D5190E2247006B7ADD /* FlightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightController.m; sourceTree = "<group>"; };
-		EE04E7DA190E2A47006B7ADD /* icon120 */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon120; sourceTree = "<group>"; };
 		EE04E7DC190E2A6B006B7ADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EE54A3A8190B1E180006A1D1 /* CMMotionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMMotionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE54A3AB190B1E180006A1D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,7 +166,6 @@
 				EE54A3B2190B1E180006A1D1 /* Supporting Files */,
 				EE04E7D4190E2247006B7ADD /* FlightController.h */,
 				EE04E7D5190E2247006B7ADD /* FlightController.m */,
-				EE04E7DA190E2A47006B7ADD /* icon120 */,
 				EE04E7DC190E2A6B006B7ADD /* Images.xcassets */,
 			);
 			path = CMMotionTest;
@@ -286,7 +283,6 @@
 				EE54A3E9190B88A30006A1D1 /* yaw@2x.png in Resources */,
 				EE04E7DD190E2A6B006B7ADD /* Images.xcassets in Resources */,
 				EE54A3EA190B88A30006A1D1 /* roll@2x.png in Resources */,
-				EE04E7DB190E2A47006B7ADD /* icon120 in Resources */,
 				EE54A3B6190B1E180006A1D1 /* InfoPlist.strings in Resources */,
 				EE54A3BF190B1E180006A1D1 /* Main.storyboard in Resources */,
 			);

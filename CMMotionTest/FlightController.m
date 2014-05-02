@@ -25,12 +25,13 @@ typedef struct {
     float targetAttiData[3]; //目標の姿勢
     float diff[4]; // 各軸と目標とのズレ
     
+    float rotationRate[3]; // 回転の角速度
+    
+    
+    // PID制御のテスト用の値
     float integral;
-    
     float delta_T;
-    
     float axisPID[3];
-    
     PID_CONST pid[3];
 }
 @property (nonatomic) CMMotionManager *manager;
@@ -62,9 +63,9 @@ typedef struct {
     
     delta_T = 0.02;
     
-    targetAttiData[PITCH] = 30;
-    targetAttiData[ROLL] = 30;
-    targetAttiData[YAW] = 30;
+    targetAttiData[PITCH] = 0;
+    targetAttiData[ROLL] = 0;
+    targetAttiData[YAW] = 0;
     
     diff[0] = diff[1];
     diff[1] = targetAttiData[0] - attiData[0];
@@ -77,7 +78,15 @@ typedef struct {
         attiData[PITCH] = motion.attitude.pitch;
         attiData[ROLL] = motion.attitude.roll;
         attiData[YAW] = motion.attitude.yaw;
+        
+        rotationRate[PITCH] = motion.rotationRate.x;
+        rotationRate[ROLL] = motion.rotationRate.y;
+        rotationRate[YAW] = motion.rotationRate.z;
+        
         [self calcMotorPower];
+        
+        NSNotification *notification = [NSNotification notificationWithName:@"ChangeAtti" object:self];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
     };
     
     // 電子コンパスを使わない
@@ -88,32 +97,33 @@ typedef struct {
 
 -(void)calcMotorPower{
     
+    float Throttle = 2;
     
-
+    float rateEffect = 0.4;
     
     // このコードは水平を保とうとする
     if (attiData[ROLL] > 0){
-        motorPower[0] = 0.5 + attiData[ROLL] * self.pFactor;
-        motorPower[1] = 0.5 + attiData[ROLL] * self.pFactor;
-        motorPower[2] = 0.5 - attiData[ROLL] * self.pFactor;
-        motorPower[3] = 0.5 - attiData[ROLL] * self.pFactor;
+        motorPower[0] = Throttle - (targetAttiData[ROLL] - attiData[ROLL] + rotationRate[ROLL]*rateEffect) * self.pFactor;
+        motorPower[1] = Throttle - (targetAttiData[ROLL] - attiData[ROLL] + rotationRate[ROLL]*rateEffect) * self.pFactor;
+        motorPower[2] = Throttle + (targetAttiData[ROLL] - attiData[ROLL] - rotationRate[ROLL]*rateEffect) * self.pFactor;
+        motorPower[3] = Throttle + (targetAttiData[ROLL] - attiData[ROLL] - rotationRate[ROLL]*rateEffect) * self.pFactor;
     }else{
-        motorPower[0] = 0.5 - fabs(attiData[ROLL]) * self.pFactor;
-        motorPower[1] = 0.5 - fabs(attiData[ROLL]) * self.pFactor;
-        motorPower[2] = 0.5 + fabs(attiData[ROLL]) * self.pFactor;
-        motorPower[3] = 0.5 + fabs(attiData[ROLL]) * self.pFactor;
+        motorPower[0] = Throttle - fabs((targetAttiData[ROLL] - attiData[ROLL] + rotationRate[ROLL]*rateEffect)) * self.pFactor;
+        motorPower[1] = Throttle - fabs((targetAttiData[ROLL] - attiData[ROLL] + rotationRate[ROLL]*rateEffect)) * self.pFactor;
+        motorPower[2] = Throttle + fabs((targetAttiData[ROLL] - attiData[ROLL] - rotationRate[ROLL]*rateEffect)) * self.pFactor;
+        motorPower[3] = Throttle + fabs((targetAttiData[ROLL] - attiData[ROLL] - rotationRate[ROLL]*rateEffect)) * self.pFactor;
     }
     
     if (attiData[PITCH] > 0){
-        motorPower[0] = motorPower[0] - attiData[PITCH] * self.pFactor;
-        motorPower[1] = motorPower[1] + attiData[PITCH] * self.pFactor;
-        motorPower[2] = motorPower[2] + attiData[PITCH] * self.pFactor;
-        motorPower[3] = motorPower[3] - attiData[PITCH] * self.pFactor;
+        motorPower[0] = (motorPower[0] - attiData[PITCH] + rotationRate[PITCH]*rateEffect) * self.pFactor;
+        motorPower[1] = (motorPower[1] + attiData[PITCH] + rotationRate[PITCH]*rateEffect) * self.pFactor;
+        motorPower[2] = (motorPower[2] + attiData[PITCH] + rotationRate[PITCH]*rateEffect) * self.pFactor;
+        motorPower[3] = (motorPower[3] - attiData[PITCH] + rotationRate[PITCH]*rateEffect) * self.pFactor;
     }else{
-        motorPower[0] = motorPower[0] + fabs(attiData[PITCH]) * self.pFactor;
-        motorPower[1] = motorPower[1] - fabs(attiData[PITCH]) * self.pFactor;
-        motorPower[2] = motorPower[2] - fabs(attiData[PITCH]) * self.pFactor;
-        motorPower[3] = motorPower[3] + fabs(attiData[PITCH]) * self.pFactor;
+        motorPower[0] = (motorPower[0] + fabs(attiData[PITCH] + rotationRate[PITCH]*rateEffect)) * self.pFactor;
+        motorPower[1] = (motorPower[1] - fabs(attiData[PITCH] + rotationRate[PITCH]*rateEffect)) * self.pFactor;
+        motorPower[2] = (motorPower[2] - fabs(attiData[PITCH] + rotationRate[PITCH]*rateEffect)) * self.pFactor;
+        motorPower[3] = (motorPower[3] + fabs(attiData[PITCH] + rotationRate[PITCH]*rateEffect)) * self.pFactor;
     }
     
     

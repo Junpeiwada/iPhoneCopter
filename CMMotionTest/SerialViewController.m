@@ -50,9 +50,13 @@ typedef enum CableConnectState
 @property (weak, nonatomic) IBOutlet UILabel *labelReadCount;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelFR;
+@property (weak, nonatomic) IBOutlet UIView *viewFR;
 @property (weak, nonatomic) IBOutlet UILabel *labelRR;
+@property (weak, nonatomic) IBOutlet UIView *viewRR;
 @property (weak, nonatomic) IBOutlet UILabel *labelRL;
+@property (weak, nonatomic) IBOutlet UIView *viewRL;
 @property (weak, nonatomic) IBOutlet UILabel *labelFL;
+@property (weak, nonatomic) IBOutlet UIView *viewFL;
 @property (weak, nonatomic) IBOutlet UIStepper *pFactorStepper;
 @property (weak, nonatomic) IBOutlet UILabel *labelPFactor;
 @end
@@ -90,7 +94,7 @@ typedef enum CableConnectState
 - (IBAction)changeP:(id)sender {
     UIStepper *v = sender;
     PIDp = v.value;
-
+    
     [cont setPID:PIDp valueI:PIDi valueD:PIDd];
     [self updateGraph];
 }
@@ -123,6 +127,9 @@ typedef enum CableConnectState
     
     readBuff = [NSMutableString new];
     
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(updateUI) name:@"ChangeAtti" object:nil];
+    
     
     
     [self updateGraph];
@@ -136,15 +143,15 @@ typedef enum CableConnectState
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 #pragma mark RSC delegate
@@ -170,9 +177,9 @@ typedef enum CableConnectState
     static serialPortStatus portStat;
     
     [self.labelCTS setTextColor:(modemStatus & MODEM_STAT_CTS) ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
-    [self.labelRI setTextColor:(modemStatus & MODEM_STAT_RI) ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
+    [self.labelRI  setTextColor:(modemStatus & MODEM_STAT_RI)  ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
     [self.labelDSR setTextColor:(modemStatus & MODEM_STAT_DSR) ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
-    [self.labelCD setTextColor:(modemStatus & MODEM_STAT_DCD) ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
+    [self.labelCD  setTextColor:(modemStatus & MODEM_STAT_DCD) ? MODEM_STAT_ON_COLOR : MODEM_STAT_OFF_COLOR];
     
     if (cableState == kCableConnected){
         self.labelStatus.text = @"Connected";
@@ -191,7 +198,7 @@ typedef enum CableConnectState
     // getDataFromBytesAvailable か getStringFromBytesAvailableで読み込めるバイト数
     int bytesRead;
     
-
+    
 	UInt8 rxLoopBuff[kRSC_SerialReadBufferSize];
     for (int i = 0; i < kRSC_SerialReadBufferSize; i++) {
         rxLoopBuff[i] = 0;
@@ -210,7 +217,7 @@ typedef enum CableConnectState
     [readBuff appendString:s];
     
     NSArray *lines = [readBuff componentsSeparatedByString:@";"];
-
+    
     
     if (lines.count > 1){
         for (int i = 0; i < lines.count -1; i++) {
@@ -250,7 +257,7 @@ bool sendData = YES;
         sendBuff[1] = 1;
         sendBuff[4] = 0; // 終端文字;
     }
-
+    
     [rscMgr write:sendBuff length:5];
     
     [self updateUI];
@@ -258,10 +265,29 @@ bool sendData = YES;
 
 -(void)updateUI{
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        self.labelFR.text = [NSString stringWithFormat:@"%f",[cont currentMotorPower:0]];
-        self.labelRR.text = [NSString stringWithFormat:@"%f",[cont currentMotorPower:1]];
-        self.labelRL.text = [NSString stringWithFormat:@"%f",[cont currentMotorPower:2]];
-        self.labelFL.text = [NSString stringWithFormat:@"%f",[cont currentMotorPower:3]];
+        CGRect rect;
+        
+        float unitWidth = 100;
+        
+        self.labelFR.text = [NSString stringWithFormat:@"%d",(UInt8)[cont currentMotorPower:0]];
+        rect = self.viewFR.frame;
+        rect.size.width = unitWidth * [cont currentMotorPower:0] / 30;
+        self.viewFR.frame = rect;
+        
+        self.labelRR.text = [NSString stringWithFormat:@"%d",(UInt8)[cont currentMotorPower:1]];
+        rect = self.viewRR.frame;
+        rect.size.width = unitWidth * [cont currentMotorPower:1] / 30;
+        self.viewRR.frame = rect;
+        
+        self.labelRL.text = [NSString stringWithFormat:@"%d",(UInt8)[cont currentMotorPower:2]];
+        rect = self.viewRL.frame;
+        rect.size.width = unitWidth * [cont currentMotorPower:2] / 30;
+        self.viewRL.frame = rect;
+        
+        self.labelFL.text = [NSString stringWithFormat:@"%d",(UInt8)[cont currentMotorPower:3]];
+        rect = self.viewFL.frame;
+        rect.size.width = unitWidth * [cont currentMotorPower:3] / 30;
+        self.viewFL.frame = rect;
     });
     
 }
